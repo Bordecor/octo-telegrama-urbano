@@ -1,8 +1,8 @@
 void main() {
   Dictionary<Integer, Integer> m = new HashMap<>();
   m.put(1,312312); m.put(45, 6);
-  
-  
+
+
   if(m.containsKey(null))
     System.out.println(m.get(null));
   else
@@ -10,4 +10,51 @@ void main() {
   
   System.out.println(m);
   System.out.println(m.get(45)); //Si la clave no existe devuelve null
+
+
+//Aqui implementacion con objetos nuestros
+
+Map<Nuevo0, Integer> m = new HashMap<>();
+Nuevo o1 = new Nuevo0(dato 1);
+Nuevo o2 = new Nuevo0(dato 2);
+m.put(o1,1);
+m.put(o2,343);
+System.out.println(m); // Los elementos en las tablas hash no van en orden
+
+
+public class Nuevo0{
+  int dato;
+
+  public Nuevo0(int dato){this.dato = dato;}
+
+  @Override
+  public int hashCode() {
+    return dato;
+  }
+  @Override
+  public boolean equals(Object obj) {
+    return obj instanceof Nuevo0 no && dato == no.dato;
+  }
+
+//Aqui con mas datos
+
+public class Nuevo0{
+  int dato, dato2;
+
+  public Nuevo0(int dato, int dato2){
+    this.dato = dato;
+    this.dato2 = dato2;
+  }
+
+  @Override
+  public int hashCode() {
+    return dato + "|" + dato2; // Van a ser strings diferentes
+    // return (dato + "|" + dato2).hashcode(); Asi devuelve un hash de todo
+  }
+  @Override
+  public boolean equals(Object obj) {
+    return obj instanceof Nuevo0 no && dato == no.dato && dato2 == no.dato2;
+  }
+
+
 }
