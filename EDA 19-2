@@ -58,3 +58,34 @@ public class Nuevo0{
 
 
 }
+Map<Integer, string> dir = new HashMap<>() {
+  
+}
+
+  public class Direccion {
+    int num;
+    string calle;
+
+      public void (string calle, int num) {
+        this.calle = calle;
+        this.num = num;
+      }
+  
+      @Override
+      public int hashCode() {
+        return (calle + " | " + num).hashCode();
+      }
+      @Override
+      public boolean equals(Object obj) {
+        return obj instanceof Direccion dir && dir.num == num && dir.calle.equals(calle);
+      }
+  }
+    
+
+}
+
+// Implementacion clase gestion direcciones de una ciudad, asociandolas a monumentos.
+// Insertar nuevo
+// Recuperar
+// Nombre: GestorMonumentos
+// Las operaciones tienen que tener coste temporal consante 
