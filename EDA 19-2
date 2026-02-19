@@ -1,0 +1,13 @@
+void main() {
+  Dictionary<Integer, Integer> m = new HashMap<>();
+  m.put(1,312312); m.put(45, 6);
+  
+  
+  if(m.containsKey(null))
+    System.out.println(m.get(null));
+  else
+    System.out.println("no existe");
+  
+  System.out.println(m);
+  System.out.println(m.get(45)); //Si la clave no existe devuelve null
+}
