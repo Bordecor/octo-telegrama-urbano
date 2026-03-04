@@ -1,0 +1,10 @@
+void main() {
+
+Map<Integer,String> m = new HashMap<>();
+m.get(3).get(7);
+
+
+Map<Integer,Map<Integer,String>> m = new HashMap<>();
+m.get(3).get(7);
+
+}
