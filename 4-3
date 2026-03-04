@@ -8,3 +8,25 @@ Map<Integer,Map<Integer,String>> m = new HashMap<>();
 m.get(3).get(7);
 
 }
+
+  preorden(Nodo n) {
+    if(n==null) return;
+    p();
+    preorden(n.izq);
+  for(Nodo nd:n.derechos){
+    preorden(n.der);
+  }
+}
+  inorden(Nodo n) {
+if(n.null) return;
+inorden(n.izq);
+p();
+inorden(n.der); 
+}
+
+postorden(Nodo n) {
+if(n.null)return;
+postorden(n.izq);
+postorden(n.der);
+p();
+}
