@@ -1,0 +1,23 @@
+boolean montMax<E>( <E>[] array ) {
+  int cont = 0;
+  int talla = array.length
+  for(int i = 1; i<talla ; i++){
+
+    if(i <= talla && array[i] < array[i+1]) { cont++;}
+  }
+
+  if(cont == talla){
+    return true;
+  } else {
+    return false;
+  }
+}
+//Corrección:
+//i <= (array.length -1) / 2
+for(int i = 1; i<talla ; i++){
+  int hizq = i*2;
+  int hder = i*2+1;
+  if(hizq < array.length && array[i] < array[hizq]) return false;
+  if(hder < array.length && array[i] < array[hder]) return false;
+}
+return true;
